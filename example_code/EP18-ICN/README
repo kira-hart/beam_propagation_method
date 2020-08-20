@@ -1,0 +1,16 @@
+This exercise package is meant as a help for the
+Project on the Iterated Crank-Nicolson method.
+
+This is a fully vectorial source in c/c++ and
+shows one possible implementation. This particular
+program aims to emphasize the conceptual similarity
+to the method of lines in that the core of the algorithm
+only requires a definition of what appears on the
+right-hand side of the propagation equation.
+
+For the purposes of the project, one can simplify the
+task to the semi-vectorial approximation --- the
+structure of the method remains the same [however note
+that its numerical behavior may be different: it is
+relatively difficult to break the SV version, while
+the FV version may exhibit instability more readily] 

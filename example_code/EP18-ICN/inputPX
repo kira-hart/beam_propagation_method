@@ -1,0 +1,30 @@
+BPM_simulation_parameters 
+
+  Driver                    
+    basename                  PX
+    wavelength                1.55e-06
+    z_step                    5e-09 
+    z_stop                    20e-05 
+    report_every              1000
+
+  Computational_domain      
+    size_LX                   10.0e-06 
+    points_NX                 100 
+    size_LY                   10.0e-06 
+    points_NY                 100 
+
+  Initial_condition         
+    E_x                       1.0
+    E_y                       0.0
+    beam_size                 0.5e-06 
+    angle                     0 
+
+  Refractive_index          
+    substrate                 3.40 
+    core                      3.44 
+    dimension_0               0.0e-06 
+    dimension_1               0.5e-06 
+    dimension_2               1.0e-06 
+    dimension_3               1.5e-06 
+
+

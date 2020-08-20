@@ -1,0 +1,21 @@
+p1.m Illustrates:
+
+* Attempt to implement an explicit FD beam propagation 
+  (paraxial beam propagation equation)
+
+Explore: 
+
+1. No matter what the input parameters, propagation never reaches any "useful distance".
+   step 25 micron -> 1-2 mm propagation
+   step 5  micron -> 3-4 mm propagation
+
+2. Instability grows from noise even for a very smooth initial condition
+
+3. If the initial condition contains a cusp (e.g. at the domain boundary),
+it seeds the unstable growth very quickly (use a wide beam to see this).
+try:  waist 40 -> 140 micron   
+
+Lesson: 
+A) unstable method is useless
+B) instability shows up fastest with "sharp features"
+   This observation useful for: 'stress tests' e.g. when one can not determine stability properties explicitly

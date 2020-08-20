@@ -1,0 +1,20 @@
+"comparative" implementation of DHT-BPM in c and Matlab
+
+Transform coding and (very simple) testing:
+
+myDHT.cc myDHT.m and testDHT.m
+
+
+BPM implementation:
+
+p1FFT.m (for comaprison) and p2DHT.m simulate spot of Arago.
+DHT-BPM.cc is a c-analogue of p2DHT.m
+
+outputs:
+DHT-BPM.cc: Xini.dat Xfin.dat (initial and final beam profiel)
+            Xpro.dat (propagator array to check)
+
+Matlab outputs to compare different algorithm results:
+amplitude_vs_radius_DHT.dat
+amplitude_vs_x_FFT.dat
+

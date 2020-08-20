@@ -1,0 +1,29 @@
+This EP illustrates ADI BPM
+(Gauss beam diffraction, comparison with the analytic target)
+
+the ADI scheme:
+src -> E00
+TDM_Apply:  R00  =  LPX*E00
+TDM_Solve:          LMY*E12 = R00
+TDM_APPLY:  R12  =  LPY*E12
+TDM_Solve:          LMX*E11 = R12
+E11-> tar
+
+Test1: Use parameters1.cc, and time the execution.
+Compare running time, and results, to the 2D CN-BPM
+utilizing direct sparse solver of Matlab (EP11).
+
+Test2: Use parameters2.cc, and compile. Compare the
+final solution real-part map with that obtained in
+EP11. This case is to highlight the anisotropy induced
+by the lattice. Which of the two algorithms suffers
+more from the grid anisotropy?
+
+
+Numerical Dispersion
+
+dispersion_ADI_BPM.cc implements the white-noise method 
+to measure the numerical dispersion curve. The "curve" is 
+in fact a surface, due to two transverse dimension. To
+keep things simpel,  we only measure the k_y=0 trace of
+this surface. 

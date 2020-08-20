@@ -1,0 +1,13 @@
+what n2: 1e-23
+what wavelength: 8e-07
+what beam waist: 0.005
+what intensity: 1e+16
+what focal length: 0
+
+  #  SF distance: 
+
+  #  Pi:  3.92699e+11
+  #  Pc:  9.35189e+09
+  #  z0:  98.1748
+  #  zf1: 6.40359
+  #  zf2: 6.40407

@@ -72,6 +72,18 @@ def propagate1D(numsteps , Ei, Hi ,CFL):
         i=i+1
     return(E, H)
     
+def save_steps1D(numsteps , Ei, Hi ,CFL):
+    N=int(len(Ei))
+    E = np.zeros((numsteps,N))
+    H = np.zeros((numsteps,N))
+    E[0] = Ei
+    H[0] = Hi
+    i =1
+    while i < numsteps:
+        E[i],H[i] = take1Dstep(E[i-1],H[i-1],CFL,N)
+        i=i+1
+    return(E, H)
+    
 def simple_wave(x,k0):
     return(cmath.cos(k0*x))
     
@@ -82,6 +94,12 @@ def simple_field(k0, N):
         Ei[i] =  simple_wave(i,k0)
         Hi[i] = 0
     return(Ei,Hi)
+    
+def initial_whitenoise(N):
+    Ei=np.random.uniform(-1,1,N)
+    Hi=np.zeros(N)
+    return(Ei,Hi)
+    
     
 def zero_counting(Ei,Hi,CFL,N,k0,countnum):
     E=Ei;H=Hi
@@ -102,4 +120,9 @@ def zero_counting(Ei,Hi,CFL,N,k0,countnum):
     omega= 2*cmath.pi/T
     YeeValue = 2.0/CFL*cmath.asin( CFL* cmath.sin(k0/2.0))
     return(omega,YeeValue)
+    
+def find_envelope_analytic():
+    print("hi")
+    
+    
     

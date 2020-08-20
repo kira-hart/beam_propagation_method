@@ -1,0 +1,23 @@
+#!/bin/bash
+
+shopt -s expand_aliases
+source ~/.bash_profile
+
+
+make a
+time a.out
+
+echo "Base Simulation: Note the smooth edge in the initial condition"
+xmgrace -p pars -autoscale none sol-f.dat sol-i.dat
+
+echo "Running comparative simulation for DHT-BPM"
+matlab -r  p2DHT
+
+echo "Comparing results..."
+xmgrace -p pars -autoscale none sol-f.dat amplitude_vs_radius_DHT.dat sol-i.dat
+
+echo "Running comparative simulation for a coarser grid AND sharp initial condition"
+matlab -r  p2DHT_B
+
+echo "... and omparing results..."
+xmgrace -p pars -autoscale none sol-f.dat amplitude_vs_radius_DHT_B.dat sol-i.dat

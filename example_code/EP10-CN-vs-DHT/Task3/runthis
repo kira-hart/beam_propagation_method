@@ -1,0 +1,29 @@
+#!/bin/bash
+
+shopt -s expand_aliases
+source ~/.bash_profile
+
+
+make a
+time a.out
+
+echo "Base Simulation: Note the smooth edge in the initial condition"
+xmgrace -p pars -autoscale none sol-f.dat sol-i.dat
+
+make b 
+time b.out
+
+echo "Comparison B: sharp-edge initial condition"
+xmgrace -p pars -autoscale none sol-f.dat sol-f-B.dat sol-i.dat
+
+make c
+time c.out
+
+echo "Comparison C: shart-edge initial condition + shorter z-step"
+xmgrace -p pars -autoscale none sol-f.dat sol-f-C.dat sol-f-B.dat
+
+make d
+time d.out 
+
+echo "Comparison D: sharp-edge initial condition + coarser grid resolution"
+xmgrace -p pars -autoscale none sol-f.dat sol-f-D.dat sol-f-B.dat

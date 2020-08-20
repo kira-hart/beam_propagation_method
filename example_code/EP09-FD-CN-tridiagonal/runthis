@@ -1,0 +1,17 @@
+#!/bin/bash
+
+shopt -s expand_aliases
+source ~/.bash_profile
+
+make b
+b.out
+
+echo "Compare numerical and analytic solutions - linear domain case:"
+xmgrace -p gpars -nxy sol-f.dat  -nxy sol-a.dat
+
+
+make a
+a.out
+
+echo "Compare numerical and analytic solutions - radial domain case:"
+xmgrace -p gpars -nxy sol-f.dat  -nxy sol-a.dat

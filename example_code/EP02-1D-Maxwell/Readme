@@ -1,0 +1,18 @@
+# Note: p1.m is a matlab source meant as a point of departure
+# for matlab-implementation analogous to OneDMaxwell-WithBoundary.c
+
+
+make cleanall
+make a
+
+# just before boundaries are reached:
+a.out 3500
+xmgrace E?.dat
+
+# during absorption
+a.out 4000
+xmgrace E?.dat
+
+# after absorption, zoom-in to see the reflected pulses
+a.out 5000
+xmgrace E?.dat

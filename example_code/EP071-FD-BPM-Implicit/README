@@ -1,0 +1,21 @@
+simple run(s) demonstrating stability of the implicit method
+     Main.m + Parameters0.m , Parameters1.m  (focused, collimated)
+
+testing against Gaussian
+    Test.m
+    Questions: What controls the error?
+    Vary:      a) grid spacing
+               b) integration step
+
+
+measurement of the dispersion curve
+    DispersionStudy.m 
+    Observe: Damping in real "time"-space, + in spectral space
+
+convergence w.r.t. dx:
+    ConvergenceStudy.m
+
+convergence w.r.t. dz:
+    ConvergenceStudy2.m
+
+

@@ -1,0 +1,17 @@
+1. Main.m    = the same as for implicit (in EP071)
+2. Method.m  = completely analogous to implicit, note coeff. modifications
+3. Test.m    = compare with the same run as for implicit
+               ... making sure that Parameters1.m are the same in both cases
+
+4. ConvergenceStudy2.m 
+   compare with the counterpart in implicit: with the same parametrs it
+   highlightes the superior rate of convergence in C-N
+
+5. DispersionStudy.m
+   compare with the implicit:
+   a) full dispersion curve visible    
+   b) all wavenumbers equally well defined (they have similar lifetimes)
+   c) Q: this time we can see a rectangular texture. Its origin
+      will obviously be similar to that in the Maxwell case. 
+      What is it? 
+

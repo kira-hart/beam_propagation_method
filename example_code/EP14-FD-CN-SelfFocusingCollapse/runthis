@@ -1,0 +1,8 @@
+
+
+#make a
+
+#a.out | tee > recordA
+
+cut -d" " -f1,2 recordA > IntensityA.dat
+

@@ -1,0 +1,11 @@
+
+f = Sqrt[1 + x] - 1;
+
+eop = Exp[ I k0 dz f ]
+
+pap = PadeApproximant[eop, {x, 0, {2,2}}];
+
+num = Numerator[pap];
+den = Denominator[pap];
+
+slx = Solve[num == 0, x];

@@ -1,0 +1,6 @@
+This folder holds a rough template for a bare-bone 2D-FFT-BPM
+
+Task:
+* Implement your own version
+* Set up a test against Gaussian beam propagation, correct errors
+

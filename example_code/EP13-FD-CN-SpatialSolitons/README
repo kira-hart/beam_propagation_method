@@ -1,0 +1,25 @@
+1.
+Main + Parameters0 = diffracting solution (needs ABC, here functioning nicely)
+
+2.
+Main + Parameters1 = nonlineaority ON,
+  a) Parameters1: demonstrates stable soliton
+  b) modify Nz --- compare error (note the order of NL approximation)
+  c) modify dx --- compare error
+
+3.
+Main + Prameters_angle = propagation at angle
+  a) base run --- modest but evident error
+  b) increase NX to 450 -- compare error
+  c) decrease NZ to 50  -- only modest increase of error
+
+4.
+Main + Pars2, Pars3 = Higher-order solitons
+   * also check 4th and 5th order in the notes
+
+5.
+Main + Pars_GaussIC
+  a) base run --- nearly periodic but stable
+
+6.
+Main + Parameters_G_unstable  = instability for a long step

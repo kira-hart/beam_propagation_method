@@ -1,0 +1,14 @@
+Parameters0.m :  
+computationally inexpensive demonstration of code correctness
+
+Parameters1.m : 
+Longer wavelength with other params kept unchanges shows improved accuracy
+                 
+Parameters2.m : 
+Propagation with sharper focus reveals grid anisotropy
+
+Parameters3.m : 
+Attempt to reduce anisotropy of the numerical solution.
+Needs smaler beam diameter to reduce high transverse wavenumbers.
+Compare runs with w0 = 0.5e-3 and 0.75e-3 ...
+

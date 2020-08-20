@@ -1,0 +1,23 @@
+
+Absorbing Boundary Conditions, Hadley
+
+A) Main.m
+
+First: Use CrankNicolson NOT CrankNicolsonABC
+
+1. Run with Parameters
+2. Run with Parameters1, (longer step) results in a failure
+3. Run with Parameters3, (sharper angle) failure is immediate
+   
+
+4. Change method: CN to CN_ABC and test with both parameter sets.
+   Note: CN_ABC contains a bit more robust ABC implementation.
+
+B) Test.m
+
+Illustrates:
+1. Breaking of the ABC by "confusion" (najprv bez lepsej metody)
+2. Nonlinearity of the ABC
+
+Things to try: Vary relative intensities of the two beams.
+

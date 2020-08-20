@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# rexcompile
+make clean
+make 
+
+# remove output from previous runs
+rm -f disp_?.dat
+
+# run simulation with counting zero-crossing
+b.out > disp_b.dat
+
+# run simulation implementing 3-point formula
+c.out > disp_c.dat
+
+#show results
+echo "Dispersion relation measured from zero-crossing"
+xmgrace -p gpars_b -nxy disp_b.dat
+
+#show results
+echo "Dispersion relation measured from a three-ppoint formula"
+xmgrace -p gpars_b -nxy disp_c.dat
+
+
+

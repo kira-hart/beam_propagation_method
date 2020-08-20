@@ -1,0 +1,11 @@
+This demonstration:
+
+
+Brute-force measurement of numerical dispersion relation:
+  YeeDispersion_1.c
+this program counts steps between zewro-crossing of the field
+observed at a select grid point (for initial condition forcing
+a sharp spatial frequency).
+
+Verification of the three-point result for numerical dispersion
+  YeeDispersion_2.c
